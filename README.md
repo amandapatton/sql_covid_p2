@@ -1,24 +1,25 @@
-# sql_covid_p2
-Demonstration of Intermediate &amp; Advanced SQL and Visualization Skills
+# SQL Project 2 - COVID-19 Year 1 Analysis
+This project demonstrates my SQL and data visualization skills using BigQuery and Looker Studio. The goal was to explore a large COVID-19 dataset, calculate key metrics like infection, death, and vaccination rates, and forecast trends using a machine learning model. With intention, I limited the scope of this projec by using a global dataset that spanned only the first year of the COVID-19 pandemic.
 
-View project visualizations in [Looker Studio](https://lookerstudio.google.com/reporting/79c09048-6a92-4eed-89ff-073b44d958ac).
+---
 
-# COVID-19 Data Analysis & Forecasting (Project #2)
+## Project Snapshot
 
-This project demonstrates my SQL and data visualization skills using BigQuery and Looker Studio. The goal was to explore a large COVID-19 dataset, calculate key metrics like infection and death rates, and forecast trends using a machine learning model.
+**Goal:** Explore global COVID-19 data, calculate infection and death rates, and forecast trends.  
 
-## Project Overview
+**Technologies:** SQL (BigQuery), BigQuery ML (ARIMA_PLUS), Looker Studio  
+
+**Key Skills Demonstrated:**  
+- Data validation and exploration  
+- Advanced SQL (joins, CTEs, window functions)  
+- Creating reusable views for dashboards  
+- Time series forecasting and integration with visualization  
 
 **Objectives**  
 - Explore and validate COVID-19 case and vaccination data.  
 - Calculate infection rates, death rates, and rolling vaccination totals by location and continent.  
 - Build views in BigQuery for streamlined visualization in Looker Studio.  
 - Forecast infection rates using an ARIMA_PLUS ML model for short-term predictions.  
-
-**Technologies Used**  
-- SQL (BigQuery)  
-- BigQuery ML for time series forecasting  
-- Looker Studio for dashboards and visualizations  
 
 ## Data Exploration & Analysis
 
@@ -28,7 +29,7 @@ This project demonstrates my SQL and data visualization skills using BigQuery an
   - Infection rate per location (`total_cases / population`)  
   - Rolling totals for vaccinations and deaths  
 - Identified locations with the highest infection and death rates.  
-- Aggregated totals by continent and globally for comparison.  
+- Aggregated totals by continent and globally for comparison.
 
 ## Data Modeling & Views
 
@@ -51,13 +52,26 @@ Created reusable BigQuery views to simplify analysis and visualization:
 
 - Learned to handle data type inconsistencies and casting issues for Looker Studio compatibility.  
 - Practiced advanced SQL techniques: window functions, CTEs, joins, and BigQuery ML.  
-- Gained experience creating modular views to support scalable analytics and dashboarding.  
+- Gained experience creating modular views to support scalable analytics and dashboarding.
 
-## Next Steps
+## Key Findings
 
-- Expand forecasts to include vaccination impact on infection trends.  
-- Explore additional time series models for improved accuracy.  
-- Continue building portfolio projects demonstrating SQL and visualization proficiency.
+From the analysis and dashboard visualizations:  
+- **Europe’s vaccination adoption was 2x that of North America**, showing faster rollout.  
+- **South America had a 2x higher death rate than North America** despite similar average vaccination rates.  
+- **Europe had the highest average vaccination rate and the highest average death rate**, suggesting that external factors (e.g., age distribution, healthcare strain, co-morbidities) may have influenced outcomes.
+
+---
+
+## Example Dashboards
+
+![Global Summary & Infection Rates](screenshot1.png)  
+*Global totals, infection rate by country, and forecast trends for top 5 countries.*  
+
+![Vaccination Trends](screenshot2.png)  
+*Vaccination adoption by continent and relationship between vaccination vs. death rates.*  
+
+**View project visualizations in [Looker Studio](https://lookerstudio.google.com/reporting/79c09048-6a92-4eed-89ff-073b44d958ac).**
 
 ## Quick Links & Sample Queries
 
@@ -93,3 +107,10 @@ SELECT *
 FROM ML.FORECAST(MODEL `covid_19_project.infection_forecast_model`,
   STRUCT(30 AS horizon, 0.9 AS confidence_level))
 ```
+
+## Next Steps
+
+- Expand forecasts to include vaccination impact on infection trends.  
+- Investigate the relationship between vaccination and co-morbidities in death outcomes.
+- Explore alternative time series models for improved forecast accuracy.
+- Continue building portfolio projects demonstrating SQL and visualization expertise.
