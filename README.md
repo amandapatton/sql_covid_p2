@@ -65,10 +65,11 @@ From the analysis and dashboard visualizations:
 
 ## Example Dashboards
 
-![Global Summary & Infection Rates](screenshot1.png)  
+![Global Summary & Infection Rates](https://github.com/amandapatton/sql_covid_p2/blob/main/sql_covid_p2%20image%201.png) 
+
 *Global totals, infection rate by country, and forecast trends for top 5 countries.*  
 
-![Vaccination Trends](screenshot2.png)  
+![Vaccination Trends](https://github.com/amandapatton/sql_covid_p2/blob/main/sql_covid_p2%20image%202.png)
 *Vaccination adoption by continent and relationship between vaccination vs. death rates.*  
 
 **View project visualizations in [Looker Studio](https://lookerstudio.google.com/reporting/79c09048-6a92-4eed-89ff-073b44d958ac).**
